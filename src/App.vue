@@ -1,5 +1,4 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue';
 import NavBar from './components/UI/NavBar.vue';
 import SideBar from './components/UI/SideBar.vue';
 export default {
