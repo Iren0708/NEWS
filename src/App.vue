@@ -3,12 +3,15 @@ import NavBar from './components/UI/NavBar.vue';
 import SideBar from './components/UI/SideBar.vue';
 export default {
   name: 'App',
-  components: { SideBar, NavBar },
+  components: { SideBar, NavBar},
   data() {
     return {
       isSideBarOpen: false,
     };
   },
+  created(){
+
+  }
 };
 </script>
 
@@ -21,12 +24,19 @@ export default {
         }
       "
     />
-    <v-main>
+    <v-main style="margin-top: 45px ;">
       <side-bar v-if="isSideBarOpen" />
-      <router-view />
+      <div
+      :style="isSideBarOpen ? 'margin-left: 266px;' : ''"
+      >
+      <router-view>
+
+      </router-view> 
+      </div>
     </v-main>
   </v-app>
 </template>
+
 
 <style>
 .logo {
@@ -42,8 +52,11 @@ export default {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 .v-main {
-  top: 20px;
+  top: 40px;
   width: 100% !important;
   padding: 0 !important;
+}
+.v-app {
+  max-width: 1680px;
 }
 </style>
