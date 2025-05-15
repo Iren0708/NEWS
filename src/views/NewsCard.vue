@@ -76,7 +76,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 16px 24px;
+    padding: 56px 24px;
     gap: 10px;
   }
   </style>
