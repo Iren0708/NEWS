@@ -1,30 +1,21 @@
+
 <template>
-    <div class="oblastotobr">
+<div class="conteiner">
+        <div class="zagolovok" >
+          <v-icon icon="mdi:mdi-arrow-left" style="width: 24px;height: 24px;"></v-icon>
+          <h2 class="nazvanie" style="font-family: Open Sans;font-weight: 600;font-size: 34px;line-height: 40px;letter-spacing: 0%;"
+ >В обществе прошли мероприятия, посвящённые Дню Победы</h2>
+        </div>
+      <div class="oblastotobr">
       <div class="img"></div>
       <div>
         <div class="data">16 мая 2024 12:00</div>
-        <div class="text-for-news">В обществе прошли мероприятия, посвящённые Дню Победы </div>
         <div class="text">В обществе прошли мероприятия, посвящённые Дню Победы. В них приняли участие 156 работников.</div>
-        <button class="btn" @click="goToOneNews">Читать далее</button>
       </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'NewsBig',
-    methods: {
-    goToOneNews() {
-      this.$router.push({ name: 'NewsCard' , 
-        params:{
-          newsId: 1
-      }});
-    }
-  }
-  };
-  </script>
-  
-  <style scoped>
+</div>    
+</template>
+<style scoped>
   .oblastotobr {
     width: 1800px;
     height: 353px;
@@ -69,5 +60,30 @@
     text-align: left;
     padding-left: 20px;
   }
+  .conteiner {
+    left: 0 !important;
+  }
+  
+  .zagolovok {
+    background: #f6f6f6;
+    width: 1611px;
+    height: 15%;
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-left: 24px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 10px;
+  }
   </style>
   
+  <script>
+export default {
+    name: 'NewsCard',
+    
+}
+</script>

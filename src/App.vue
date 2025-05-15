@@ -52,11 +52,9 @@ export default {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 .v-main {
-  top: 40px;
+  
   width: 100% !important;
   padding: 0 !important;
 }
-.v-app {
-  max-width: 1680px;
-}
+
 </style>
