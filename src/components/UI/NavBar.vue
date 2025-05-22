@@ -20,33 +20,20 @@
         :width="291"
       ></v-text-field>
     </div>
-    <v-menu :width="254" :height="118">
-      <template v-slot:activator="{ props }">
-        <div class="user-info" v-bind="props">
-          <span> {{ fullName }} </span>
-          <v-icon icon="mdi:mdi-menu-down"></v-icon>
-        </div>
-      </template>
-      <v-list>
-        <v-list-item link @click="navigateToSettings">
-          <div class="news">
-            <v-icon icon="mdi:mdi-cog"></v-icon>
-            <span class="news-text"> Настройки </span>
-          </div>
-        </v-list-item>
-        <v-list-item link @click="logout">
-          <div class="news">
-            <v-icon icon="mdi:mdi-exit-to-app"></v-icon>
-            <span class="news-text"> Выход </span>
-          </div>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+    <div>
+      <UserMenu/>
+    </div>
   </v-app-bar>
 </template>
 
 <script>
+
+import UserMenu from './UserMenu.vue';
+
 export default {
+  components:{
+    UserMenu,
+  },
   data() {
     return {
       isSideBarOpen: false,
@@ -58,18 +45,9 @@ export default {
     toggleDropdown() {
       this.dropdownOpen = !this.dropdownOpen;
     },
-    navigateToProfile() {
-      console.log('Переход на страницу профиля'); // Логика перехода на страницу профиля
-    },
-    logout() {
-      console.log('Выход из системы'); // Логика выхода из системы
-    },
     toggleSidebar() {
       this.isSideBarOpen = !this.isSideBarOpen;
       this.$emit('toggle-sidebar', this.isSideBarOpen);
-    },
-    toggleDropdown() {
-      this.dropdownOpen = !this.dropdownOpen;
     },
   },
 };

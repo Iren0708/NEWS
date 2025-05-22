@@ -24,6 +24,13 @@ const vuetify = createVuetify({
 });
 
 const app = createApp(App);
+import {registerServices}  from './plugins/api/index.js'
+registerServices(app);
 app.use(vuetify);
 app.use(router);
+// app.use(store);
 app.mount('#app');
+
+
+
+
