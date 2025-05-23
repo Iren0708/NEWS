@@ -23,16 +23,18 @@
     <div>
       <UserMenu/>
     </div>
+    
   </v-app-bar>
 </template>
 
 <script>
 
 import UserMenu from './UserMenu.vue';
+import UserPanel from './UserPanel.vue';
 
 export default {
   components:{
-    UserMenu,
+    UserMenu, UserPanel
   },
   data() {
     return {

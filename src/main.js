@@ -1,7 +1,8 @@
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
-import router from './router/router'
+import router from './router/router';
+import store from './store';
 import '@mdi/font/css/materialdesignicons.css';
 import { aliases, mdi } from 'vuetify/iconsets/mdi';
 // Vuetify
@@ -28,7 +29,7 @@ import {registerServices}  from './plugins/api/index.js'
 registerServices(app);
 app.use(vuetify);
 app.use(router);
-// app.use(store);
+app.use(store);
 app.mount('#app');
 
 

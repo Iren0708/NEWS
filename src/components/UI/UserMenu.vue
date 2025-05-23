@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <button v-if="unRegisteredUser" class="btnn" @click="goToOneNews">Войти</button>
+        <UserPanel/>
         <v-menu :width="254" :height="118">
       <template v-slot:activator="{ props }">
         <div class="user-info" v-if="!unRegisteredUser"  v-bind="props">
@@ -27,9 +27,14 @@
     </div>
 </template>
 <script>
+import UserPanel from './UserPanel.vue';
+
 export default {
     name: "UserMenuOptionApi",
     inject: ['usersService'],
+    components:{
+      UserPanel
+  },
     data: () => ({
       unRegisteredUser: true,
     }),
