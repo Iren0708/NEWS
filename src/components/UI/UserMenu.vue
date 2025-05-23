@@ -2,28 +2,7 @@
 
     <div>
         <UserPanel/>
-        <v-menu :width="254" :height="118">
-      <template v-slot:activator="{ props }">
-        <div class="user-info" v-if="!unRegisteredUser"  v-bind="props">
-          <span> {{ fullName }} </span>
-          <v-icon icon="mdi:mdi-menu-down"></v-icon>
-        </div>
-      </template>
-      <v-list>
-        <v-list-item link @click="navigateToSettings">
-          <div class="news">
-            <v-icon icon="mdi:mdi-cog"></v-icon>
-            <span class="news-text"> Настройки </span>
-          </div>
-        </v-list-item>
-        <v-list-item link @click="logout">
-          <div class="news">
-            <v-icon icon="mdi:mdi-exit-to-app"></v-icon>
-            <span class="news-text"> Выход </span>
-          </div>
-        </v-list-item>
-      </v-list>
-        </v-menu>
+        
     </div>
 </template>
 <script>

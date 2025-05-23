@@ -189,6 +189,7 @@ export default {
         if (!this.login || !this.password) {
           return alert('Не заполнены обязательные поля');
         }
+        console.log({login: this.login, password: this.password})
         await this.$store.dispatch('usersStore/INIT_AUTORIZATION', {login: this.login, password: this.password})
             .then(res => {
               console.log(res)

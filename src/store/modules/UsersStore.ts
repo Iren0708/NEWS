@@ -30,8 +30,9 @@ const userModule = {
         async INIT_AUTORIZATION({commit, dispatch}, usersInfo) {
             await UserService.authorizationUser(usersInfo.login, usersInfo.password).then((response) => {
                 alert(response.message);
-                localStorage.setItem('currentUser', JSON.stringify(response.user.id));
-                dispatch('INIT_CURRENT_USER', response.user.id);
+                console.log(response)
+                localStorage.setItem('currentUser', JSON.stringify(response.user.Id));
+                dispatch('INIT_CURRENT_USER', response.user.Id);
             })
                 .catch(error => {
                     console.error(error);
