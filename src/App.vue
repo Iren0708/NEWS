@@ -1,9 +1,10 @@
 <script>
 import NavBar from './components/UI/NavBar.vue';
 import SideBar from './components/UI/SideBar.vue';
+import Uprav from './views/Uprav.vue';
 export default {
   name: 'App',
-  components: { SideBar, NavBar},
+  components: { SideBar, NavBar,Uprav},
   data() {
     return {
       isSideBarOpen: false,

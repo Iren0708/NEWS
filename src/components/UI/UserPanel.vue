@@ -133,7 +133,10 @@ export default {
       return [
         {
           value:1,
-          title: 'Настройки'
+          title: 'Настройки',
+          action: () => {
+            this.$router.push({ name: 'Uprav' });
+          }
         },
         {
           value:2,
