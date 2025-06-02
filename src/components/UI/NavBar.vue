@@ -30,17 +30,16 @@
 <script>
 
 import UserMenu from './UserMenu.vue';
-import UserPanel from './UserPanel.vue';
 
 export default {
   components:{
-    UserMenu, UserPanel
+    UserMenu
   },
   data() {
     return {
       isSideBarOpen: false,
       dropdownOpen: false,
-      fullName: 'Шестакова И.А.', //Свое имя пользователя
+       //Свое имя пользователя
     };
   },
   methods: {

@@ -1,10 +1,11 @@
 <script>
 import NavBar from './components/UI/NavBar.vue';
 import SideBar from './components/UI/SideBar.vue';
-import Uprav from './views/Uprav.vue';
+import UserMenu from './components/UI/UserMenu.vue';
+ 
 export default {
   name: 'App',
-  components: { SideBar, NavBar,Uprav},
+  components: { SideBar, NavBar,UserMenu},
   data() {
     return {
       isSideBarOpen: false,

@@ -19,7 +19,14 @@ class UserService {
     async getUserById(userId) {
         return fetchData(`${API_BASE_URL}/users/${userId}`);
     }
-    
+
+    // Создать нового пользователя
+    async createUser(userData) {
+        return fetchData(`${API_BASE_URL}/users`, {
+            method: "POST",
+            body: JSON.stringify(userData),
+        });
+    }
 }
 
 // Класс для работы с API пользователей

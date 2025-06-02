@@ -1,8 +1,8 @@
 import {createWebHashHistory, createRouter} from 'vue-router';
 
 import News from '../views/News.vue';
-import NewsCard from '../views/NewsCard.vue'
-import Uprav from '../views/Uprav.vue'
+import NewsCard from '../views/NewsCard.vue';
+import controlNews from '../views/controlNews.vue';
 const routes = [
     {
         name: 'News',
@@ -15,10 +15,10 @@ const routes = [
         component: NewsCard
     },
     {
-        name: 'Uprav',
-        path: '/news/uprav',
-        component: Uprav
-    },
+        path: '/controlNews',
+        name: 'controlNews',
+        component: controlNews,
+      },
   
 ];
 
