@@ -21,26 +21,25 @@
       ></v-text-field>
     </div>
     <div>
-      <UserMenu/>
+      <UserPanel/>
     </div>
-    
   </v-app-bar>
 </template>
 
 <script>
 
-import UserMenu from './UserMenu.vue';
+
 import UserPanel from './UserPanel.vue';
 
 export default {
+  name: 'Navbar',
   components:{
-    UserMenu, UserPanel
+    UserPanel, 
   },
   data() {
     return {
       isSideBarOpen: false,
       dropdownOpen: false,
-      fullName: 'Шестакова И.А.', //Свое имя пользователя
     };
   },
   methods: {
@@ -105,5 +104,9 @@ export default {
 }
 .dropdown-menu li:hover {
   background-color: #f0f0f0; /* эффект наведения */
+}
+.v-btn {
+  outline: none !important;
+  margin-right: 8px;
 }
 </style>

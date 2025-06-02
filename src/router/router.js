@@ -16,7 +16,7 @@ const routes = [
     },
     {
         name: 'Uprav',
-        path: '/news/uprav',
+        path: '/uprav',
         component: Uprav
     },
   

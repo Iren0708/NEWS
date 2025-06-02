@@ -1,10 +1,12 @@
 <script>
 import NavBar from './components/UI/NavBar.vue';
 import SideBar from './components/UI/SideBar.vue';
+import UserPanel from './components/UI/UserPanel.vue';
 import Uprav from './views/Uprav.vue';
+
 export default {
   name: 'App',
-  components: { SideBar, NavBar,Uprav},
+  components: { SideBar, NavBar,UserPanel,Uprav,},
   data() {
     return {
       isSideBarOpen: false,
@@ -18,7 +20,7 @@ export default {
 
 <template>
   <v-app>
-    <nav-bar
+    <NavBar
       @toggle-sidebar="
         (isOpen) => {
           isSideBarOpen = isOpen;

@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer :height="1040" :width="267" style="transform: unset !important;">
+  <v-navigation-drawer :height="1040" :width="267" >
     <v-list-item link>
       <div class="news">
         <v-icon icon="mdi-home"></v-icon>

@@ -135,8 +135,8 @@ export default {
           value:1,
           title: 'Настройки',
           action: () => {
-            this.$router.push({ name: 'Uprav' });
-          }
+            this.$router.push('/uprav');
+          },
         },
         {
           value:2,
@@ -192,7 +192,6 @@ export default {
         if (!this.login || !this.password) {
           return alert('Не заполнены обязательные поля');
         }
-        console.log({login: this.login, password: this.password})
         await this.$store.dispatch('usersStore/INIT_AUTORIZATION', {login: this.login, password: this.password})
             .then(res => {
               console.log(res)
@@ -230,6 +229,6 @@ export default {
 }
 </script>
 
-<style >
+<style lang="scss" scoped>
 
 </style>

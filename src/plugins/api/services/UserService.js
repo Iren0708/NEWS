@@ -1,4 +1,4 @@
-import {API_BASE_URL, fetchData} from "@/plugins/api/apiConfig.js";
+import { API_BASE_URL, fetchData } from '../apiConfig.js';
 
 class UserService {
     constructor() {
