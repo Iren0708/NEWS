@@ -81,7 +81,7 @@
 import { getNewsList } from '@/plugins/api/services/NewsService.js';
 
 export default {
-  name: 'uprav',
+  name: 'Uprav',
   data() {
     return {
       news: [],
@@ -109,7 +109,6 @@ export default {
       } catch (error) {
         console.error('Ошибка при загрузке новостей:', error);
         alert('Ошибка при загрузке новостей');
-        console.log(await getNewsList());
       }
     },
     toDate(dateStr) {
