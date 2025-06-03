@@ -126,7 +126,7 @@ export default {
   background: #f6f6f6;
   width: 1611px;
   height: 15%;
-  padding-top: 16px;
+  padding-top: 10px;
   padding-right: 24px;
   padding-left: 24px;
   display: flex;
@@ -148,12 +148,12 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 15px;
-  padding: 24px 0 24px 24px;
+  padding: 20px 0 20px 20px;
   overflow-x: auto;
 }
 th,
 td {
-  padding: 12px 16px;
+  padding: 10px 12px;
   text-align: left;
   border: 1px solid #aaafb9;
 }
